@@ -1,6 +1,6 @@
 # Club La Nación
 
-<p align="center"><a href="" target="_blank" ><img width="100" height="80"src="./public/static/iconClubLN.svg" alt="logo"></a></p>
+<p align="center"><a href="https://club-la-nacion-bertini.netlify.app/" target="_blank" ><img width="100" height="80"src="./public/static/iconClubLN.png" alt="logo"></a></p>
 
 ## Iniciar Proyecto
 
@@ -22,6 +22,7 @@ El proyecto esta desarrollado en NextJS y TypeScript
 - [Next.js Documentation](https://nextjs.org/docs) - ver mas sobre Next.js sus caracteristicas y API.
 - [Learn Next.js](https://nextjs.org/learn) - un tutorial interactivo de Next.js.
 
-## Desarrollador
+### Desarrollador
 
 Nicolás Bertini Argañaras
+[https://club-la-nacion-bertini.netlify.app/]
