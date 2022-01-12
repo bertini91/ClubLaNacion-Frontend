@@ -1,0 +1,18 @@
+.buttonBenCod {
+  background: #fff;
+  font-family: arial;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: #008dff;
+  border-radius: 30px;
+  border: 2px solid #008dff;
+  transition: all 0.3s;
+  padding: 10px 25px;
+  display: inline-block;
+}
+.buttonBenCod:hover {
+  background-color: #008dff;
+  color: #fff;
+}

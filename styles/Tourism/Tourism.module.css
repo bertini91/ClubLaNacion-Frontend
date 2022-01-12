@@ -1,0 +1,128 @@
+.tourismContent {
+  position: relative;
+  display: block;
+  padding-left: 20px;
+}
+
+.tourismHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  padding-left: 15%;
+  padding-right: 15%;
+  margin: 20px 40px;
+}
+.tourismTitle {
+  font-family: SuecaSlab-Regular;
+  font-weight: 600;
+  color: #00043a;
+  font-size: 25px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.tourismButton {
+  background: #fff;
+  font-family: arial;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: #008dff;
+  border-radius: 30px;
+  border: 2px solid #008dff;
+  transition: all 0.3s;
+  padding: 10px 25px;
+  display: inline-block;
+}
+.tourismButton:hover {
+  background-color: #008dff;
+  color: #fff;
+}
+
+.sliderContent {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+}
+.cardContent {
+  display: flex;
+}
+
+.buttonPrev {
+  left: -45px;
+  transform: rotate(180deg) !important;
+  float: left;
+  top: 40%;
+}
+
+.buttonNext {
+  margin-left: 15px;
+  right: -45px;
+  top: 47%;
+}
+
+.buttons {
+  background-image: url("../../public/static/button-next.svg") !important;
+  border-color: transparent;
+  background: no-repeat;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  width: 35px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 992px) {
+  .sliderContent {
+    width: 1024px;
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+}
+@media (min-width: 1200px) {
+  .sliderContent {
+    width: 1170px;
+  }
+}
+
+@media (max-width: 1328px) {
+  .sliderContent {
+    width: 80%;
+  }
+  .tourismHeader {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 830px) {
+  .sliderContent {
+    width: 600px;
+  }
+  .tourismHeader {
+    display: block;
+    width: auto;
+  }
+  .tourismTitle {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 730px) {
+  .sliderContent {
+    width: 500px;
+    padding-bottom: 20px;
+  }
+  .cardContent {
+    width: 450px;
+    overflow-x: scroll;
+    padding-bottom: 20px;
+  }
+}

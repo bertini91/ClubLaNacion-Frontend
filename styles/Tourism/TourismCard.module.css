@@ -1,0 +1,46 @@
+.cardContent {
+  display: block;
+  margin: 0 5px;
+  border-radius: 5px;
+  border-color: #dce4ed;
+  border-width: 2px;
+  border-style: solid;
+  text-align: left;
+  width: 150px !important;
+}
+
+.cardImg {
+  width: 145px;
+  height: 120px !important;
+  margin: 0;
+  margin-bottom: 15px;
+  background-color: #b2d7ff;
+  border-top: 15px;
+  float: right;
+}
+.cardDetail {
+  height: auto;
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.cardTitle {
+  text-transform: uppercase;
+}
+.cardText {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.discount {
+  display: flex;
+}
+.cardTextDiscount {
+  margin-right: 7px;
+  padding-right: "4px";
+  border-width: "1px";
+}
+.cardTextLocation {
+  font-size: 10px;
+  color: #404e4c;
+}
