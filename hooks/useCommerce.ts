@@ -16,7 +16,6 @@ export const useCommerceDiscount = (): CommerceDesc[] => {
       const commerce = await consultAPI(baseUrl, "");
       const result = await commerce.json();
       setUseCoomerceState(result);
-      console.log(result);
     } catch (error) {
       console.log(error);
     }

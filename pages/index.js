@@ -16,6 +16,8 @@ const Home = () => {
   return (
     <>
       <Head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
         <title>CLub la Nacion</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>

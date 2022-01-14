@@ -17,7 +17,6 @@ export const TourismCard: NextPage<Props> = ({
   location,
 }) => {
   const externaImageLoader = ({ src }: { src: string }) => src;
-  console.log(name);
   return (
     <div className={`${style.cardContent}`}>
       <div className={`${style.cardImg}`}>
