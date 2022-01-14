@@ -1,5 +1,5 @@
 .cardContent {
-  display: block;
+  display: grid;
   margin: 0 5px;
   border-radius: 5px;
   border-color: #dce4ed;

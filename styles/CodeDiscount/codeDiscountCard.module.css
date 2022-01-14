@@ -1,5 +1,5 @@
 .cardContent {
-  display: block;
+  display: grid;
   margin: 0 5px;
   border-radius: 5px;
   border-color: #dce4ed;
@@ -7,6 +7,7 @@
   border-style: solid;
   text-align: left;
   width: 150px !important;
+  background-color: #0070ff;
 }
 
 .cardImg {
@@ -24,7 +25,7 @@
   height: auto;
   border-radius: 5px;
   font-weight: bold;
-  background-color: #0070ff;
+
   width: auto;
   padding-bottom: 15px;
 }

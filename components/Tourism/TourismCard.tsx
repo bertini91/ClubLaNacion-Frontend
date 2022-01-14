@@ -88,7 +88,7 @@ export const TourismCard: NextPage<Props> = ({
         </div>
 
         <p className={`${style.cardText} ${style.cardTextLocation}`}>
-          <Image src={locationImg} width={15} height={12} /> A {location} Km
+          <Image src={locationImg} width={15} height={12} /> A {location}
         </p>
       </div>
     </div>
