@@ -10,8 +10,8 @@ import { useCommerceTurism, useCommerceDiscount } from "../hooks/useCommerce";
 export const MyContext = React.createContext(null);
 
 const Home = () => {
-  const accountsState = useCommerceTurism();
   const discountState = useCommerceDiscount();
+  const accountsState = useCommerceTurism();
 
   return (
     <>
