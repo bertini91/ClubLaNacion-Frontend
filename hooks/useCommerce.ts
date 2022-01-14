@@ -1,67 +1,49 @@
 import { useState, useEffect } from "react";
+import { consultAPI } from "../helpers/fetch";
+import getConfig from "next/config";
+import { CommerceDesc, CommerceTurism } from "../interfaces/account";
 
-interface CommerceDesc {
-  commerce: string;
-  imgURL: string;
-}
+const { publicRuntimeConfig } = getConfig();
+const { ACCOUNT_DISCOUNT, ACCOUNT_TOURISM } = publicRuntimeConfig;
 
-export const useCommerce = (): CommerceDesc[] => {
+export const useCommerceDiscount = (): CommerceDesc[] => {
   const [useCommerceState, setUseCoomerceState] =
     useState<Array<CommerceDesc>>();
 
+  const consult = async () => {
+    const baseUrl: string | any = ACCOUNT_DISCOUNT;
+    try {
+      const commerce = await consultAPI(baseUrl, "");
+      const result = await commerce.json();
+      setUseCoomerceState(result);
+      console.log(result);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   useEffect(() => {
-    //Consultar los comercios al backend
-    const commerceList = [
-      { commerce: "COTO", imgURL: "" },
-      { commerce: "COTO1", imgURL: "" },
-      { commerce: "COTO2", imgURL: "" },
-      { commerce: "COTO3", imgURL: "" },
-    ];
-    setUseCoomerceState(commerceList);
+    consult();
   }, []);
 
   return useCommerceState;
 };
 
-interface CommerceTurism {
-  imageURL: string;
-  commerce: string;
-  discount: Array<string>;
-  location: number;
-}
 export const useCommerceTurism = (): CommerceTurism[] => {
   const [useCommerceTurismState, setUseCoomerceTurimsState] =
     useState<Array<CommerceTurism>>();
+  const consult = async () => {
+    const baseUrl: string | any = ACCOUNT_TOURISM;
+    try {
+      const commerce = await consultAPI(baseUrl, "");
+      const result = await commerce.json();
+      setUseCoomerceTurimsState(result);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   useEffect(() => {
-    //Consultar los comercios al backend
-    const commerceList = [
-      {
-        imageURL: "",
-        commerce: "COTO",
-        discount: ["20%", "15%", "10%"],
-        location: 0.75,
-      },
-      {
-        imageURL: "",
-        commerce: "COTO1",
-        discount: ["20%", "15%", "10%"],
-        location: 0.95,
-      },
-      {
-        imageURL: "",
-        commerce: "COTO2",
-        discount: ["20%", "15%", "10%"],
-        location: 0.55,
-      },
-      {
-        imageURL: "",
-        commerce: "COTO3",
-        discount: ["20%", "15%", "10%"],
-        location: 0.15,
-      },
-    ];
-    setUseCoomerceTurimsState(commerceList);
+    consult();
   }, []);
 
   return useCommerceTurismState;

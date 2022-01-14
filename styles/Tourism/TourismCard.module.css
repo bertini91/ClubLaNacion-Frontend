@@ -17,6 +17,7 @@
   background-color: #b2d7ff;
   border-top: 15px;
   float: right;
+  position: relative;
 }
 .cardDetail {
   height: auto;

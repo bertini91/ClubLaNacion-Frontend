@@ -1,12 +1,13 @@
 import Link from "next/link";
-import React from "react";
 import { TourismCard } from "./TourismCard";
-import { NextPage } from "next";
+import { CommerceTurism } from "../../interfaces/account";
 import style from "../../styles/Tourism/Tourism.module.css";
-import { useCommerceTurism } from "../../hooks/useCommerce";
 
-const Tourism: NextPage = () => {
-  const commers = useCommerceTurism();
+interface Props {
+  accounts: Array<CommerceTurism>;
+}
+
+const Tourism = ({ accounts }: Props) => {
 
   return (
     <div className={style.tourismContent}>
@@ -19,16 +20,19 @@ const Tourism: NextPage = () => {
       <div className={`${style.sliderContent}`}>
         <button className={` ${style.buttons} ${style.buttonPrev}`}></button>
         <div className={style.cardContent}>
-          {commers &&
-            commers.map(({ imageURL, commerce, discount, location }, key) => (
-              <TourismCard
-                key={key}
-                commerce={commerce}
-                imageURL={imageURL}
-                discount={discount}
-                location={location}
-              />
-            ))}
+          {accounts &&
+            accounts.map(({ images, name, discount, location }, key) => {
+              const url = images[0].url;
+              return (
+                <TourismCard
+                  key={key}
+                  name={name}
+                  images={url || ""}
+                  discount={["20%", "15%", "10%"]}
+                  location={location}
+                />
+              );
+            })}
         </div>
         <button className={`${style.buttons} ${style.buttonNext} `}></button>
       </div>

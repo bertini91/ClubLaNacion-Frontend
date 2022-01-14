@@ -10,9 +10,16 @@ module.exports = {
         }, // a permanent redirect
       ];
     },
+    reactStrictMode: true,
     images: {
-      domains: ['https://bucket1.glanacion.com', 'example2.com'],
+      domains: ["bucket1.glanacion.com", "localhost", "http://bucket1.glanacion.com/Club.LN/anexos/"],
+      formats: ["image/png", "image/jpeg", "image/jpg"],
     },
   },
-  
+  publicRuntimeConfig: {
+    HEROKU_URL: "https://la-nacion-itr.herokuapp.com",
+    CLUB_LN_URL: "https://club.lanacion.com.ar",
+    ACCOUNT_TOURISM: "api/accounts/tourism",
+    ACCOUNT_DISCOUNT: "api/accounts/active-flag",
+  },
 };

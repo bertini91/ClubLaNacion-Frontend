@@ -1,13 +1,15 @@
 import React from "react";
-import { NextPage } from "next";
-import style from "../../styles/CodeDiscount/codeDiscount.module.css";
 import Link from "next/link";
 import CodeDiscountCard from "./CodeDiscountCard";
-import { useCommerce } from "../../hooks/useCommerce";
+import style from "../../styles/CodeDiscount/codeDiscount.module.css";
+import { CommerceDesc } from "../../interfaces/account";
 
-const CodeDiscount: NextPage = (): JSX.Element => {
-  const commerceList = useCommerce();
+interface Props {
+  accountsDiscount: Array<CommerceDesc>;
+}
 
+const CodeDiscount = ({ accountsDiscount }: Props): JSX.Element => {
+  console.log(accountsDiscount);
   return (
     <div className={style.codeDescContent}>
       <div className={style.codeDescHeader}>
@@ -25,9 +27,13 @@ const CodeDiscount: NextPage = (): JSX.Element => {
       <div className={`${style.sliderContent}`}>
         <button className={`${style.buttonPrev} ${style.buttons}`}></button>
         <div className={`${style.sliderCards}`}>
-          {commerceList &&
-            commerceList.map(({ commerce, imgURL }, key) => (
-              <CodeDiscountCard key={key} commerce={commerce} imgURL={imgURL} />
+          {accountsDiscount &&
+            accountsDiscount.map(({ name, images }, key) => (
+              <CodeDiscountCard
+                key={key}
+                commerce={name}
+                images={images[0].url}
+              />
             ))}
         </div>
         <button className={`${style.buttonNext} ${style.buttons}`}></button>

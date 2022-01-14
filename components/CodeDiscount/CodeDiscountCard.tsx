@@ -5,15 +5,16 @@ import Link from "next/link";
 
 interface CommerceDesc {
   commerce: string;
-  imgURL: string;
+  images: string;
 }
 
-const CodeDiscountCard = ({ commerce, imgURL }: CommerceDesc): JSX.Element => {
+const CodeDiscountCard = ({ commerce, images }: CommerceDesc): JSX.Element => {
+  const externaImageLoader = ({ src }: { src: string }) => src;
   return (
     <div className={`${style.cardContent}`}>
       <div className={`${style.cardImg}`}>
-        {imgURL !== "" && (
-          <Image src={imgURL} alt="imagen" layout="fill"></Image>
+        {images !== "" && (
+          <Image loader={externaImageLoader} src={images} alt="imagen" layout="fill"></Image>
         )}
       </div>
       <div className={style.cardDetail}>

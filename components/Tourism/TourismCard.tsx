@@ -5,28 +5,35 @@ import locationImg from "../../public/static/location.svg";
 import style from "../../styles/Tourism/TourismCard.module.css";
 
 interface Props {
-  imageURL: string;
-  commerce: string;
+  images: string;
+  name: string;
   discount: Array<string>;
   location: number;
 }
-
 export const TourismCard: NextPage<Props> = ({
-  imageURL = "",
-  commerce,
+  images = "",
+  name,
   discount,
   location,
 }) => {
-
+  const externaImageLoader = ({ src }: { src: string }) => src;
+  console.log(name);
   return (
     <div className={`${style.cardContent}`}>
       <div className={`${style.cardImg}`}>
-        {imageURL !== "" && (
-          <Image src={imageURL} alt="imagen" layout="fill"></Image>
+        {images !== "" && (
+          <Image
+            loader={externaImageLoader}
+            src={images}
+            alt="imagen"
+            layout="fill"
+            width={"146px"}
+            height={"120px"}
+          ></Image>
         )}
       </div>
       <div className={style.cardDetail}>
-        <p className={style.cardTitle}>{commerce} </p>
+        <p className={style.cardTitle}>{name} </p>
         <div className={style.discount}>
           {discount.map((item, index) => {
             if (index > 1) {
