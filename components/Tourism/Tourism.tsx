@@ -8,7 +8,6 @@ interface Props {
 }
 
 const Tourism = ({ accounts }: Props) => {
-
   return (
     <div className={style.tourismContent}>
       <div className={style.tourismHeader}>
@@ -21,7 +20,7 @@ const Tourism = ({ accounts }: Props) => {
         <button className={` ${style.buttons} ${style.buttonPrev}`}></button>
         <div className={style.cardContent}>
           {accounts &&
-            accounts.map(({ images, name, discount, location }, key) => {
+            accounts.map(({ images, name, discount, location, crmid }, key) => {
               const url = images[0].url;
               return (
                 <TourismCard
@@ -30,6 +29,7 @@ const Tourism = ({ accounts }: Props) => {
                   images={url || ""}
                   discount={["20%", "15%", "10%"]}
                   location={location}
+                  crmid={crmid}
                 />
               );
             })}

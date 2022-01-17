@@ -9,26 +9,30 @@ interface Props {
   name: string;
   discount: Array<string>;
   location: number;
+  crmid: string;
 }
 export const TourismCard: NextPage<Props> = ({
   images = "",
   name,
   discount,
   location,
+  crmid,
 }) => {
   const externaImageLoader = ({ src }: { src: string }) => src;
   return (
     <div className={`${style.cardContent}`}>
       <div className={`${style.cardImg}`}>
         {images !== "" && (
-          <Image
-            loader={externaImageLoader}
-            src={images}
-            alt="imagen"
-            layout="fill"
-            width={"146px"}
-            height={"120px"}
-          ></Image>
+          <a href={`https://club.lanacion.com.ar/${crmid}`} target="_blank">
+            <Image
+              loader={externaImageLoader}
+              src={images}
+              alt="imagen"
+              layout="fill"
+              width={"146px"}
+              height={"120px"}
+            ></Image>
+          </a>
         )}
       </div>
       <div className={style.cardDetail}>

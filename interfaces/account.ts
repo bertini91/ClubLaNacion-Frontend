@@ -4,6 +4,7 @@ export interface CommerceTurism {
   discount: Array<string>;
   location: number;
   name: string;
+  crmid:string,
   [x: string]: any;
 }
 
