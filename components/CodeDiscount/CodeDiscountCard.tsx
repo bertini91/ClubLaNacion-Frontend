@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import style from "../../styles/CodeDiscount/codeDiscountCard.module.css";
-import Link from "next/link";
 
 interface CommerceDesc {
   commerce: string;

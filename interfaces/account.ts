@@ -12,5 +12,6 @@ export interface CommerceTurism {
 export interface CommerceDesc {
   name: string;
   images: Array<{ url: string }>;
+  crmid: string;
   [x: string]: any;
 }

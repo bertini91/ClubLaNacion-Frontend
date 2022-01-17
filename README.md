@@ -1,6 +1,6 @@
 # Club La Nación
 
-<p align="center"><a href="https://club-la-nacion-bertini.netlify.app/" target="_blank" ><img width="150" height="110"src="./public/static/iconClubLN.png" alt="logo" style="max-width: 100%;background-color: #008dff;border-radius: 10px;padding: 5px;"></a></p>
+<a href="https://club-la-nacion-bertini.netlify.app/" target="_blank" > <span style="color: #008dff"><img width="150" height="110"src="./public/static/iconClubLN.png" alt="logo" style="max-width: 100%;background-color: #008dff;border-radius: 10px;padding: 5px;"></span> </a>
 
 ## Iniciar Proyecto
 
@@ -25,5 +25,5 @@ El proyecto esta desarrollado en NextJS y TypeScript
 
 ### Desarrollador
 
-Nicolás Bertini Argañaras 
+Nicolás Bertini Argañaras
 [https://club-la-nacion-bertini.netlify.app/]

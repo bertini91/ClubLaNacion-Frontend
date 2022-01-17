@@ -9,7 +9,6 @@ interface Props {
 }
 
 const CodeDiscount = ({ accountsDiscount }: Props): JSX.Element => {
-  console.log(accountsDiscount);
   return (
     <div className={style.codeDescContent}>
       <div className={style.codeDescHeader}>
