@@ -1,6 +1,6 @@
 # Club La Nación
 
-<a href="https://club-la-nacion-bertini.netlify.app/" target="_blank" > <span style="color: #008dff"><img width="150" height="110"src="./public/static/iconClubLN.png" alt="logo" style="max-width: 100%;background-color: #008dff;border-radius: 10px;padding: 5px;"></span> </a>
+<p align="center"><a href="https://club-la-nacion-bertini.netlify.app/" target="_blank" ><img width="220" height="180"src="./public/static/iconClubLN.jpg" alt="logo" style="max-width: 100%;background-color: #008dff;border-radius: 10px;padding: 5px;"></a></p>
 
 ## Iniciar Proyecto
 
@@ -17,6 +17,7 @@ Abrir [http://localhost:3000](http://localhost:3000) pra ver el resultado.
 ## Descripcion
 
 Este proyecto fue solicitado por personal del sector desarrollo de "La Nacion" por medio de mi trabajo en ITR como desarrollador fullstack.
+No se utilizó ninguna dependencia de tercero, como fue solicitado.
 
 El proyecto esta desarrollado en NextJS y TypeScript
 
