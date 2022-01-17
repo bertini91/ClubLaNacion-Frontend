@@ -20,16 +20,16 @@ const Tourism = ({ accounts }: Props) => {
         <button className={` ${style.buttons} ${style.buttonPrev}`}></button>
         <div className={style.cardContent}>
           {accounts &&
-            accounts.map(({ images, name, discount, location, crmid }, key) => {
+            accounts.map(({ images, name, location, crmid, benefits }, key) => {
               const url = images[0].url;
               return (
                 <TourismCard
                   key={key}
                   name={name}
                   images={url || ""}
-                  discount={["20%", "15%", "10%"]}
                   location={location}
                   crmid={crmid}
+                  benefits={benefits}
                 />
               );
             })}

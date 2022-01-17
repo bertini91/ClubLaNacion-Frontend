@@ -28,11 +28,12 @@ const CodeDiscount = ({ accountsDiscount }: Props): JSX.Element => {
         <button className={`${style.buttonPrev} ${style.buttons}`}></button>
         <div className={`${style.sliderCards}`}>
           {accountsDiscount &&
-            accountsDiscount.map(({ name, images }, key) => (
+            accountsDiscount.map(({ name, images, crmid }, key) => (
               <CodeDiscountCard
                 key={key}
                 commerce={name}
                 images={images[0].url}
+                crmid={crmid}
               />
             ))}
         </div>

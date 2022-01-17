@@ -35,6 +35,7 @@ export const useCommerceTurism = (): CommerceTurism[] => {
     try {
       const commerce = await consultAPI(baseUrl, "");
       const result = await commerce.json();
+      console.log(result);
       setUseCoomerceTurimsState(result);
     } catch (error) {
       console.log(error);

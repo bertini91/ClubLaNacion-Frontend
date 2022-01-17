@@ -35,6 +35,7 @@
 
 .discount {
   display: flex;
+  justify-content: center;
 }
 .cardTextDiscount {
   margin-right: 7px;

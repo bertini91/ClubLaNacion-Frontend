@@ -7,18 +7,19 @@ import style from "../../styles/Tourism/TourismCard.module.css";
 interface Props {
   images: string;
   name: string;
-  discount: Array<string>;
   location: number;
   crmid: string;
+  benefits: Array<{ type: string }>;
 }
 export const TourismCard: NextPage<Props> = ({
   images = "",
   name,
-  discount,
   location,
   crmid,
+  benefits,
 }) => {
   const externaImageLoader = ({ src }: { src: string }) => src;
+  console.log(location);
   return (
     <div className={`${style.cardContent}`}>
       <div className={`${style.cardImg}`}>
@@ -38,57 +39,58 @@ export const TourismCard: NextPage<Props> = ({
       <div className={style.cardDetail}>
         <p className={style.cardTitle}>{name} </p>
         <div className={style.discount}>
-          {discount.map((item, index) => {
-            if (index > 1) {
-              const styleColor: CSSProperties = {
-                color: "#0573f9",
-              };
-              return (
-                <p
-                  key={index}
-                  className={`${style.cardText} ${style.cardTextDiscount}`}
-                  style={styleColor}
-                >
-                  {item}
-                </p>
-              );
-            }
-            if (index == 1) {
-              const styleColor: CSSProperties = {
-                color: "#222455",
-                borderRightStyle: "solid",
-                borderRightColor: "#dce4ed",
-                paddingRight: "4px",
-                borderWidth: "1px",
-              };
-              return (
-                <p
-                  key={index}
-                  className={`${style.cardText} ${style.cardTextDiscount}`}
-                  style={styleColor}
-                >
-                  {item}
-                </p>
-              );
-            } else {
-              const styleColor: CSSProperties = {
-                color: "#0019a5",
-                borderRightStyle: "solid",
-                borderRightColor: "#dce4ed",
-                paddingRight: "4px",
-                borderWidth: "1px",
-              };
-              return (
-                <p
-                  key={index}
-                  className={`${style.cardText} ${style.cardTextDiscount}`}
-                  style={styleColor}
-                >
-                  {item}
-                </p>
-              );
-            }
-          })}
+          {benefits &&
+            benefits.map(({ type }, index) => {
+              if (index > 1) {
+                const styleColor: CSSProperties = {
+                  color: "#0573f9",
+                };
+                return (
+                  <p
+                    key={index}
+                    className={`${style.cardText} ${style.cardTextDiscount}`}
+                    style={styleColor}
+                  >
+                    {type}
+                  </p>
+                );
+              }
+              if (index == 1) {
+                const styleColor: CSSProperties = {
+                  color: "#222455",
+                  borderRightStyle: "solid",
+                  borderRightColor: "#dce4ed",
+                  paddingRight: "4px",
+                  borderWidth: "1px",
+                };
+                return (
+                  <p
+                    key={index}
+                    className={`${style.cardText} ${style.cardTextDiscount}`}
+                    style={styleColor}
+                  >
+                    {type}
+                  </p>
+                );
+              } else {
+                const styleColor: CSSProperties = {
+                  color: "#0019a5",
+                  borderRightStyle: "solid",
+                  borderRightColor: "#dce4ed",
+                  paddingRight: "4px",
+                  borderWidth: "1px",
+                };
+                return (
+                  <p
+                    key={index}
+                    className={`${style.cardText} ${style.cardTextDiscount}`}
+                    style={styleColor}
+                  >
+                    {type}
+                  </p>
+                );
+              }
+            })}
         </div>
 
         <p className={`${style.cardText} ${style.cardTextLocation}`}>

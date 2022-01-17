@@ -6,9 +6,10 @@ import Link from "next/link";
 interface CommerceDesc {
   commerce: string;
   images: string;
+  crmid: string
 }
 
-const CodeDiscountCard = ({ commerce, images }: CommerceDesc): JSX.Element => {
+const CodeDiscountCard = ({ commerce, images, crmid }: CommerceDesc): JSX.Element => {
   const externaImageLoader = ({ src }: { src: string }) => src;
   return (
     <div className={`${style.cardContent}`}>
@@ -20,7 +21,7 @@ const CodeDiscountCard = ({ commerce, images }: CommerceDesc): JSX.Element => {
       <div className={style.cardDetail}>
         <p className={style.cardTitle}>{commerce} </p>
         <div className={style.cardDescButton}>
-          <Link href={"/"}>quiero mi descuento</Link>
+          <a href={`https://club.lanacion.com.ar/${crmid}`} target="_blank">quiero mi descuento</a>
         </div>
       </div>
     </div>
